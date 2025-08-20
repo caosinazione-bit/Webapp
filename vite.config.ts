@@ -4,6 +4,8 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
+  // Necessario per il deploy su GitHub Pages: il sito è servito sotto /Webapp/
+  base: "/Webapp/",
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -18,11 +20,12 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dirname, "client", "src"),
-      "@shared": path.resolve(import.meta.dirname, "shared"),
+      "@": path.resolve(import.meta.dirname, "client", "SRC"),
+      "@shared": path.resolve(import.meta.dirname, "Shared"),
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
   },
+  // Root del client con capitalizzazione reale della repo
   root: path.resolve(import.meta.dirname, "client"),
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
