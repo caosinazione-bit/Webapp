@@ -6,8 +6,10 @@
     "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
     "noEmit": true,
     "module": "ESNext",
+    "target": "ES2015",
     "strict": true,
     "lib": ["esnext", "dom", "dom.iterable"],
+    "downlevelIteration": true,
     "jsx": "preserve",
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -17,7 +19,7 @@
     "types": ["node", "vite/client"],
     "paths": {
       "@/*": ["./client/SRC/*"],
-      "@shared/*": ["./shared/*"]
+      "@shared/*": ["./Shared/*"]
     }
   }
 }
