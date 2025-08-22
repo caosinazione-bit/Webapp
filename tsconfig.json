@@ -1,5 +1,5 @@
 {
-  "include": ["client/SRC/**/*", "shared/**/*", "server/**/*"],
+  "include": ["client/SRC/**/*", "Shared/**/*", "Server/**/*"],
   "exclude": ["node_modules", "build", "dist", "**/*.test.ts"],
   "compilerOptions": {
     "incremental": true,
@@ -15,9 +15,9 @@
     "moduleResolution": "bundler",
     "baseUrl": ".",
     "types": ["node", "vite/client"],
-    "paths": {
+          "paths": {
       "@/*": ["./client/SRC/*"],
-      "@shared/*": ["./shared/*"]
+      "@shared/*": ["./Shared/*"]
     }
   }
 }
