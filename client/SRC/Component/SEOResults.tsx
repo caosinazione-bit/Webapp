@@ -16,7 +16,7 @@ export function SEOResults({ seoResults, onNewAnalysis }: SEOResultsProps) {
   const copyToClipboard = async (text: string, itemType: string) => {
     try {
       await navigator.clipboard.writeText(text);
-      setCopiedItems(prev => new Set([...prev, itemType]));
+      setCopiedItems(prev => new Set(Array.from(prev).concat(itemType)));
       setTimeout(() => {
         setCopiedItems(prev => {
           const newSet = new Set(prev);

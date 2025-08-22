@@ -192,30 +192,4 @@ const FormError = ({ id, className }: FormErrorProps) => (
   />
 )
 
-interface FormDescriptionProps {
-  id?: string
-  className?: string
-}
-
-const FormDescription = ({ id, className }: FormDescriptionProps) => (
-  <p
-    id={id}
-    className={cn("text-sm text-muted-foreground", className)}
-  />
-)
-
-interface FormItemProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-const FormItem = ({ className, ...props }: FormItemProps) => (
-  <div className={cn("space-y-2", className)} {...props} />
-)
-
-const FormLabel = LabelPrimitive.Root
-
-interface FormControlProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-const FormControl = ({ ...props }: FormControlProps) => (
-  <div {...props} />
-)
-
-export { FormItem, FormLabel, FormControl, FormDescription, FormError }
+export { FormError }
