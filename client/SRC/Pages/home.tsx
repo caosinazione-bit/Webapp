@@ -54,6 +54,12 @@ export default function Home() {
               <h1 className="text-xl font-semibold text-gray-800">YouTube SEO Optimizer</h1>
             </div>
             <div className="flex items-center space-x-4">
+              <a 
+                href="/analytics" 
+                className="text-sm text-gray-600 hover:text-youtube-red transition-colors"
+              >
+                Analytics Dashboard
+              </a>
               <span className="text-sm text-gray-600">Powered by Google AI Studio</span>
               <div className="w-8 h-8 bg-youtube-red rounded-full flex items-center justify-center">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
